@@ -33,6 +33,7 @@
 		</Compiler>
 		<Linker>
 			<Add library="sfml-audio" />
+			<Add library="sfml-system" />
 		</Linker>
 		<Unit filename="file_mic_recorder.cpp" />
 		<Unit filename="file_mic_recorder.hpp" />
