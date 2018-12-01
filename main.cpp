@@ -7,9 +7,6 @@ int main(int argc, char* argv[])
     if(argc != 2)
         return EXIT_FAILURE;
 
-    if(!sf::SoundRecorder::isAvailable())
-        return EXIT_FAILURE;
-
     micrecorder.start(argv[1]);
     while(getwchar() != L'Q');
     micrecorder.stop();
