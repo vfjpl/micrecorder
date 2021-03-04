@@ -8,7 +8,7 @@ class File_Mic_Recorder: private sf::SoundRecorder
 {
     sf::OutputSoundFile m_file;
 
-    bool onProcessSamples(const sf::Int16* samples, std::size_t sampleCount);
+    bool onProcessSamples(const sf::Int16* samples, std::size_t sampleCount) final;
 
 public:
     void setProcessingInterval(sf::Time interval);
