@@ -4,11 +4,11 @@
 #include <SFML/Audio/SoundRecorder.hpp>
 #include <SFML/Audio/OutputSoundFile.hpp>
 
-class File_Mic_Recorder: private sf::SoundRecorder
+class File_Mic_Recorder final: private sf::SoundRecorder
 {
     sf::OutputSoundFile m_file;
 
-    bool onProcessSamples(const sf::Int16* samples, std::size_t sampleCount) final;
+    bool onProcessSamples(const sf::Int16* samples, std::size_t sampleCount);
 
 public:
     void setProcessingInterval(sf::Time interval);
